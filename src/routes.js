@@ -8,10 +8,12 @@ import Machine from "./pages/Machine.svelte";
 import Schedule from "./pages/Schedule.svelte";
 import Setting from "./pages/Setting.svelte";
 import Login from "./pages/Login.svelte";
+import EditFactory from "./pages/EditFactory.svelte";
 export const routes= {
     // Exact path
     "/": Home,
     "/setup-factory": SetupFactory,
+    "/edit-factory": EditFactory,
     "/floor": Floor,
     "/camera":Camera,
     "/employee": Employee,

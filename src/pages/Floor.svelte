@@ -1,4 +1,5 @@
 <script>  
+    import { fade } from "svelte/transition";
     import Navigation from "../Components/Navigation.svelte";
     import {  moveToPrevPage, moveToNextPage, moveToHomePage } from "../store/currentPage";
    
@@ -12,7 +13,7 @@
         moveToHomePage()
     }  
 </script>
-<main class="pl-4">
+<main class="pl-4" in:fade="{{duration: 500}}">
     <h2>Floor </h2>
     <Navigation 
         handleNext={handleNext} 

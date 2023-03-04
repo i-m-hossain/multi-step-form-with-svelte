@@ -2,11 +2,12 @@
 
     import { link } from "svelte-spa-router";
     import { currentPage } from "../store/currentPage";
+    import active from 'svelte-spa-router/active'
 </script>
 
 <div class="flex flex-col space-y-5 border-r px-4">
     <div class="">
-        <a href="/" use:link>Helios</a>
+        <a href="/" use:link use:active >Helios</a>
     </div>
     <div class="flex flex-col">
         {#each [
@@ -23,6 +24,7 @@
                 $currentPage = i+1}
             }
             use:link 
+            use:active
         >
             {item.slice(1)}
         </a>
@@ -31,6 +33,6 @@
         
     </div>
     <div class="flex">
-        <a href="/setting" use:link>Setting</a>
+        <a href="/setting" use:active use:link>Setting</a>
     </div>
 </div>

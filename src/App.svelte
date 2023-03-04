@@ -18,4 +18,9 @@
 	{:else}
 		<Router routes={routes}/>
 	{/if}
-
+	<style>
+		/* Style for "active" links; need to mark this :global because the router adds the class directly */
+		:global(a.active) {
+			color: red;
+		}
+		</style>
